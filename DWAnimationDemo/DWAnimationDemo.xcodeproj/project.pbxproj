@@ -14,6 +14,7 @@
 		C343A1932137E3BB00F35830 /* DWAnimationDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C343A1922137E3BB00F35830 /* DWAnimationDemoUITests.m */; };
 		C343A1A42137E6BA00F35830 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C343A1A32137E6BA00F35830 /* ViewController.m */; };
 		C343A1A72137E98C00F35830 /* HeartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C343A1A62137E98C00F35830 /* HeartViewController.m */; };
+		C3DF3FC72138ED92005F96F2 /* WaterWaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DF3FC62138ED92005F96F2 /* WaterWaveViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		C343A1A32137E6BA00F35830 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C343A1A52137E98C00F35830 /* HeartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartViewController.h; sourceTree = "<group>"; };
 		C343A1A62137E98C00F35830 /* HeartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartViewController.m; sourceTree = "<group>"; };
+		C3DF3FC52138ED92005F96F2 /* WaterWaveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterWaveViewController.h; sourceTree = "<group>"; };
+		C3DF3FC62138ED92005F96F2 /* WaterWaveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				C343A1A32137E6BA00F35830 /* ViewController.m */,
 				C343A1A52137E98C00F35830 /* HeartViewController.h */,
 				C343A1A62137E98C00F35830 /* HeartViewController.m */,
+				C3DF3FC52138ED92005F96F2 /* WaterWaveViewController.h */,
+				C3DF3FC62138ED92005F96F2 /* WaterWaveViewController.m */,
 				C343A1772137E3BB00F35830 /* Assets.xcassets */,
 				C343A17C2137E3BB00F35830 /* Info.plist */,
 				C343A17D2137E3BB00F35830 /* main.m */,
@@ -266,6 +271,7 @@
 				C343A1A42137E6BA00F35830 /* ViewController.m in Sources */,
 				C343A17E2137E3BB00F35830 /* main.m in Sources */,
 				C343A1702137E3B600F35830 /* AppDelegate.m in Sources */,
+				C3DF3FC72138ED92005F96F2 /* WaterWaveViewController.m in Sources */,
 				C343A1A72137E98C00F35830 /* HeartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

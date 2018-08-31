@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"动画demo集合";
-    _dataArr = @[@{@"title":@"❤️动画",@"controller":@"HeartViewController"}];
+    _dataArr = @[@{@"title":@"❤️动画",@"controller":@"HeartViewController"},@{@"title":@"🌊动画",@"controller":@"WaterWaveViewController"}];
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
     _tableView.backgroundColor = [UIColor clearColor];
     _tableView.delegate = self;

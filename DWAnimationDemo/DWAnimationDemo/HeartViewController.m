@@ -14,6 +14,8 @@
     NSInteger _index;
     
     NSArray *_colorArr;
+    
+    NSTimer *_timer;
 }
 
 //弧度转角度
@@ -34,7 +36,6 @@
     
     _colorArr = @[[UIColor redColor],[UIColor grayColor],[UIColor greenColor],[UIColor blueColor],[UIColor yellowColor],[UIColor orangeColor]];
     
-    
     //在cell上添加 bgView,给bgView添加两个手势检测方法
     self.view.userInteractionEnabled = YES;
     UITapGestureRecognizer *singleTapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleSingleTap:)];
@@ -50,17 +51,22 @@
     [singleTapGesture requireGestureRecognizerToFail:doubleTapGesture];
     
     
-    NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    _timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     
     //    [self drawViewWithCoordinateX:100 CoordinateY:100 Radius:100 Color:_colorArr[arc4random() % 10]];
     
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_timer invalidate];
+}
+
 - (void) timerMethod{
     NSInteger random = arc4random() % 5;
-    [self drawViewWithCoordinateX:SCREEN_WIDTH/2 CoordinateY:300 Radius:50 Color:[UIColor redColor]];
+    [self drawViewWithCoordinateX:SCREEN_WIDTH/2 CoordinateY:300 Radius:50 Color:_colorArr[random]];
 }
 
 //两个手势分别响应的方法
@@ -117,6 +123,7 @@
     [view.layer addSublayer:layer];
     
     
+    
     // 先缩小
     view.transform = CGAffineTransformMakeScale(1.5, 1.5);
     // 弹簧动画，参数分别为：时长，延时，弹性（越小弹性越大），初始速度
@@ -136,7 +143,7 @@
     [vPath stroke];
     
     
-    //    view.transform = CGAffineTransformMakeScale(1, 1);
+    view.transform = CGAffineTransformMakeScale(1, 1);
     [UIView animateWithDuration:1.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         
         //贝塞尔曲线画消失路线
@@ -152,7 +159,7 @@
         [view.layer addAnimation:keyFA forKey:@""];
         
         view.alpha = 0;
-        //        view.transform = CGAffineTransformMakeScale(0.3, 0.3);
+        view.transform = CGAffineTransformMakeScale(0.3, 0.3);
     } completion:^(BOOL finished) {
         [view removeFromSuperview];
     }];
